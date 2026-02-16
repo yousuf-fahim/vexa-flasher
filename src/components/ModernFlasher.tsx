@@ -129,15 +129,15 @@ export default function ModernFlasher() {
 
   const getStatusText = () => {
     const stages = {
-      idle: "Ready to update",
-      connecting: "Connecting to device...",
-      connected: "Connected",
-      preparing: "Downloading update...",
-      erasing: "Preparing device...",
-      flashing: "Installing update...",
-      verifying: "Verifying...",
-      done: "Update complete! Press RESET button on your device to start.",
-      error: "Error occurred",
+      idle: "Bereit zum Aktualisieren",
+      connecting: "Verbinde mit Gerät...",
+      connected: "Verbunden",
+      preparing: "Lade Update herunter...",
+      erasing: "Bereite Gerät vor...",
+      flashing: "Installiere Update...",
+      verifying: "Überprüfe...",
+      done: "Update abgeschlossen! Drücke RESET auf deinem Gerät zum Starten.",
+      error: "Fehler aufgetreten",
     };
     return stages[progress.stage];
   };
@@ -148,7 +148,7 @@ export default function ModernFlasher() {
         {/* Board Selection */}
         <div className="mb-8">
           <label className="mb-2 block text-sm font-medium text-gray-700 ">
-            1. Select Your Device
+            1. Wähle dein Gerät
           </label>
           <Select
             value={selectedBoard?.id || ""}
@@ -157,7 +157,7 @@ export default function ModernFlasher() {
               if (board) setSelectedBoard(board);
             }}
             options={boardOptions}
-            placeholder="Choose a device"
+            placeholder="Gerät auswählen"
             disabled={isBusy}
           />
         </div>
@@ -165,7 +165,7 @@ export default function ModernFlasher() {
         {/* Connection & Flash Controls */}
         <div className="mb-8">
           <label className="mb-2 block text-sm font-medium text-gray-700 ">
-            2. Connect & Update
+            2. Verbinden & Aktualisieren
           </label>
           <div className="flex flex-wrap gap-3">
             {!port ? (
@@ -177,8 +177,8 @@ export default function ModernFlasher() {
               >
                 <Usb className="h-5 w-5" />
                 {isBusy && progress.stage === "connecting"
-                  ? "Connecting..."
-                  : "Connect Device"}
+                  ? "Verbinde..."
+                  : "Gerät verbinden"}
               </Button>
             ) : (
               <Button
@@ -187,7 +187,7 @@ export default function ModernFlasher() {
                 variant="outline"
                 size="lg"
               >
-                Disconnect
+                Trennen
               </Button>
             )}
 
@@ -199,10 +199,10 @@ export default function ModernFlasher() {
             >
               <Zap className="h-5 w-5" />
               {isBusy && progress.stage !== "connecting"
-                ? "Updating..."
+                ? "Aktualisiere..."
                 : progress.stage === "done"
-                  ? "✓ Updated"
-                  : "Update Now"}
+                  ? "✓ Aktualisiert"
+                  : "Jetzt aktualisieren"}
             </Button>
           </div>
         </div>
@@ -258,7 +258,7 @@ export default function ModernFlasher() {
           <div>
             <div className="mb-2 flex items-center justify-between">
               <label className="text-sm font-medium text-gray-700 ">
-                Console Output
+                Konsole
               </label>
               {!autoScroll && (
                 <button
@@ -268,7 +268,7 @@ export default function ModernFlasher() {
                   }}
                   className="text-xs text-orange-600 hover:text-orange-500 "
                 >
-                  ↓ Jump to bottom
+                  ↓ Nach unten springen
                 </button>
               )}
             </div>
@@ -276,6 +276,7 @@ export default function ModernFlasher() {
               ref={logContainerRef}
               onScroll={handleLogScroll}
               className="h-64 overflow-y-auto rounded-lg border border-gray-200 bg-gray-50 p-4 font-mono text-xs leading-relaxed "
+              translate="no"
             >
               {logs.map((line, i) => (
                 <div

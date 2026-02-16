@@ -8,28 +8,28 @@ interface FaqItem {
 
 const faq: FaqItem[] = [
   {
-    q: "Which browsers are supported?",
-    a: "This updater works with Google Chrome (v89+), Microsoft Edge (v89+), Brave, and Opera. Safari, Firefox, and mobile browsers are not supported.",
+    q: "Welche Browser werden unterstützt?",
+    a: "Dieser Updater funktioniert mit Google Chrome (v89+), Microsoft Edge (v89+), Brave und Opera. Safari, Firefox und mobile Browser werden nicht unterstützt.",
   },
   {
-    q: "My device is not detected. What should I do?",
-    a: "First, check that your USB cable supports data transfer (some cables are charge-only). Try a different USB port. On Windows, you may need to install the CH340 or CP210x USB driver. On macOS/Linux, drivers are usually built-in. Make sure no other program is using the serial port.",
+    q: "Mein Gerät wird nicht erkannt. Was soll ich tun?",
+    a: "Überprüfe zunächst, ob dein USB-Kabel Datenübertragung unterstützt (manche Kabel dienen nur zum Laden). Probiere einen anderen USB-Port aus. Unter Windows musst du möglicherweise den CH340- oder CP210x-USB-Treiber installieren. Unter macOS/Linux sind Treiber normalerweise bereits integriert. Stelle sicher, dass kein anderes Programm den seriellen Port verwendet.",
   },
   {
-    q: "How do I enter update mode?",
-    a: 'Most devices enter update mode automatically. If the update fails, try this: Hold the BOOT button, click "Update Now", wait for "Connecting..." message, then release BOOT. Some devices require holding BOOT and tapping RESET once.',
+    q: "Wie aktiviere ich den Update-Modus?",
+    a: 'Die meisten Geräte wechseln automatisch in den Update-Modus. Falls das Update fehlschlägt, versuche Folgendes: Halte die BOOT-Taste gedrückt, klicke auf "Jetzt aktualisieren", warte auf die Meldung "Verbinde...", und lass dann BOOT los. Bei manchen Geräten musst du BOOT gedrückt halten und einmal kurz RESET drücken.',
   },
   {
-    q: "Update is stuck or very slow. What can I do?",
-    a: "Try refreshing the page and reconnecting. Use a shorter USB cable or connect directly to your computer (avoid USB hubs). If the device appears stuck, unplug it, hold BOOT, plug it back in, then release BOOT.",
+    q: "Das Update hängt oder ist sehr langsam. Was kann ich tun?",
+    a: "Versuche, die Seite zu aktualisieren und erneut zu verbinden. Verwende ein kürzeres USB-Kabel oder verbinde dich direkt mit deinem Computer (vermeide USB-Hubs). Falls das Gerät hängen bleibt, ziehe den Stecker, halte BOOT gedrückt, stecke es wieder ein und lass dann BOOT los.",
   },
   {
-    q: "Will updating erase my settings?",
-    a: "By default, your settings are preserved during updates. Only the firmware is updated, keeping your configuration intact.",
+    q: "Werden beim Update meine Einstellungen gelöscht?",
+    a: "Standardmäßig bleiben deine Einstellungen während Updates erhalten. Nur die Firmware wird aktualisiert, deine Konfiguration bleibt intakt.",
   },
   {
-    q: "How often should I update?",
-    a: "We recommend checking for updates monthly or when new features are announced. Updates include performance improvements, bug fixes, and new features for your VexaMiner.",
+    q: "Wie oft sollte ich aktualisieren?",
+    a: "Wir empfehlen, monatlich nach Updates zu suchen oder wenn neue Funktionen angekündigt werden. Updates enthalten Leistungsverbesserungen, Fehlerbehebungen und neue Funktionen für deinen VexaMiner.",
   },
 ];
 
@@ -41,10 +41,10 @@ export default function FAQ() {
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Frequently Asked Questions
+            Häufig gestellte Fragen
           </h2>
           <p className="mt-4 text-lg text-gray-600 ">
-            Common issues and solutions
+            Häufige Probleme und Lösungen
           </p>
         </div>
 

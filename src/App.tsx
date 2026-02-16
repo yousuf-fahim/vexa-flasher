@@ -20,14 +20,14 @@ export default function App() {
               <AlertCircle className="h-6 w-6 shrink-0 text-amber-600" />
               <div>
                 <h3 className="text-lg font-semibold text-amber-900">
-                  Unsupported Browser
+                  Browser nicht unterstützt
                 </h3>
                 <p className="mt-2 text-sm text-amber-800">
-                  This updater requires <strong>Google Chrome </strong> or{" "}
-                  <strong>Microsoft Edge </strong> on desktop.
+                  Dieser Updater benötigt <strong>Google Chrome 89+</strong> oder{" "}
+                  <strong>Microsoft Edge 89+</strong> auf dem Desktop.
                 </p>
                 <p className="mt-2 text-sm text-amber-700">
-                  Safari, Firefox, and mobile browsers are not supported.
+                  Safari, Firefox und mobile Browser werden nicht unterstützt.
                 </p>
                 <a
                   href="https://www.google.com/chrome/"
@@ -35,7 +35,7 @@ export default function App() {
                   rel="noopener noreferrer"
                   className="mt-4 inline-block rounded-lg bg-amber-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-amber-500"
                 >
-                  Download Chrome
+                  Chrome herunterladen
                 </a>
               </div>
             </div>

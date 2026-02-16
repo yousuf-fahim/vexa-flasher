@@ -17,11 +17,11 @@ export default function ModernHero() {
       <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Update Your VexaMiner
+            Aktualisiere deinen VexaMiner
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-300">
-            Keep your VexaMiner up to date with the latest firmware directly from your browser.
-            No downloads or technical knowledge required.
+            Halte deinen VexaMiner mit der neuesten Firmware auf dem neuesten Stand – direkt im Browser.
+            Keine Downloads oder technisches Wissen erforderlich.
           </p>
 
           {/* Feature pills */}
@@ -33,16 +33,16 @@ export default function ModernHero() {
             </div>
             <div className="flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-2 text-sm font-medium text-orange-400 backdrop-blur-sm">
               <Zap className="h-4 w-4" />
-              Under 1 Minute
+              Unter 1 Minute
             </div>
             <div className="flex items-center gap-2 rounded-full border border-gray-600 bg-gray-800/50 px-4 py-2 text-sm font-medium text-gray-300 backdrop-blur-sm">
               <Shield className="h-4 w-4" />
-              Secure & Fast
+              Sicher & Schnell
             </div>
           </div>
 
           <p className="mt-6 text-sm text-amber-400">
-            ⚠ Chrome or Edge Browser required
+            ⚠ Chrome oder Edge Browser erforderlich
           </p>
         </div>
       </div>
