@@ -2,19 +2,19 @@ import type { BoardProfile } from "./types";
 
 /**
  * ============================================================
- *  VEXAMINER BOARD MANIFEST
+ *  VEXAMINER DEVICE MANIFEST
  * ============================================================
  *
- *  EASY SETUP: To add a new board, just copy-paste a board object
+ *  EASY SETUP: To add a new device, just copy-paste a device object
  *  and update the values. That's it!
  *
  *  Binary files location:
- *    - Place .bin files in: public/firmware/<board-id>/
- *    - URLs will be: /firmware/<board-id>/filename.bin
+ *    - Place .bin files in: public/firmware/<device-id>/
+ *    - URLs will be: /firmware/<device-id>/filename.bin
  *
- *  Example: For "esp32-2432s028r", put files in:
- *    public/firmware/esp32-2432s028r/bootloader.bin
- *    public/firmware/esp32-2432s028r/partitions.bin
+ *  Example: For "vexaminer-v2", put files in:
+ *    public/firmware/vexaminer-v2/bootloader.bin
+ *    public/firmware/vexaminer-v2/partitions.bin
  *    etc.
  * ============================================================
  */
@@ -24,7 +24,7 @@ export const boards: BoardProfile[] = [
   {
     id: "vexaminer-v2",
     name: "VexaMiner v2",
-    description: "Latest VexaMiner board with 2.8\" display",
+    description: "Latest VexaMiner with 2.8\" display",
     chipFamily: "esp32",
     baudRate: 460800,
     flashMode: "dio",
@@ -55,28 +55,28 @@ export const boards: BoardProfile[] = [
     ],
   },
 
-  // ── TO ADD MORE BOARDS: Copy the block above and change values ──
+  // ── TO ADD MORE DEVICES: Copy the block above and change values ──
   // Example:
   // {
-  //   id: "esp32-new-board",
-  //   name: "ESP32 New Board",
-  //   description: "Description of the new board",
+  //   id: "vexaminer-v3",
+  //   name: "VexaMiner v3",
+  //   description: "Description of the new device",
   //   chipFamily: "esp32",
-  //   baudRate: 921600,
+  //   baudRate: 460800,
   //   flashMode: "dio",
   //   flashFreq: "40m",
   //   flashSize: "4MB",
   //   eraseAll: false,
   //   parts: [
-  //     { label: "Bootloader", offset: 0x1000, url: "/firmware/esp32-new-board/bootloader.bin" },
-  //     { label: "Partition Table", offset: 0x8000, url: "/firmware/esp32-new-board/partitions.bin" },
-  //     { label: "Firmware", offset: 0x10000, url: "/firmware/esp32-new-board/firmware.bin" },
+  //     { label: "Bootloader", offset: 0x1000, url: "/firmware/vexaminer-v3/bootloader.bin" },
+  //     { label: "Partition Table", offset: 0x8000, url: "/firmware/vexaminer-v3/partitions.bin" },
+  //     { label: "Firmware", offset: 0x10000, url: "/firmware/vexaminer-v3/firmware.bin" },
   //   ],
   // },
 ];
 
 /**
- * Look up a board by its ID.
+ * Look up a device by its ID.
  */
 export function getBoardById(id: string): BoardProfile | undefined {
   return boards.find((b) => b.id === id);

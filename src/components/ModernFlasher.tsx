@@ -83,7 +83,7 @@ export default function ModernFlasher() {
     }
 
     setPort(selected);
-    addLog("Port selected. Ready to install firmware.");
+    addLog("Port selected. Ready to update.");
     setProgress({ ...initialProgress, stage: "connected", percentage: 0 });
   }, [addLog]);
 
@@ -129,14 +129,14 @@ export default function ModernFlasher() {
 
   const getStatusText = () => {
     const stages = {
-      idle: "Ready to flash",
+      idle: "Ready to update",
       connecting: "Connecting to device...",
       connected: "Connected",
-      preparing: "Downloading firmware...",
-      erasing: "Erasing flash...",
-      flashing: "Writing firmware...",
+      preparing: "Downloading update...",
+      erasing: "Preparing device...",
+      flashing: "Installing update...",
       verifying: "Verifying...",
-      done: "Flash complete! Press RESET button on board to start.",
+      done: "Update complete! Press RESET button on your device to start.",
       error: "Error occurred",
     };
     return stages[progress.stage];
@@ -148,7 +148,7 @@ export default function ModernFlasher() {
         {/* Board Selection */}
         <div className="mb-8">
           <label className="mb-2 block text-sm font-medium text-gray-700 ">
-            1. Select Your Board
+            1. Select Your Device
           </label>
           <Select
             value={selectedBoard?.id || ""}
@@ -157,7 +157,7 @@ export default function ModernFlasher() {
               if (board) setSelectedBoard(board);
             }}
             options={boardOptions}
-            placeholder="Choose a board"
+            placeholder="Choose a device"
             disabled={isBusy}
           />
         </div>
@@ -165,7 +165,7 @@ export default function ModernFlasher() {
         {/* Connection & Flash Controls */}
         <div className="mb-8">
           <label className="mb-2 block text-sm font-medium text-gray-700 ">
-            2. Connect & Install
+            2. Connect & Update
           </label>
           <div className="flex flex-wrap gap-3">
             {!port ? (
@@ -199,10 +199,10 @@ export default function ModernFlasher() {
             >
               <Zap className="h-5 w-5" />
               {isBusy && progress.stage !== "connecting"
-                ? "Installing..."
+                ? "Updating..."
                 : progress.stage === "done"
-                  ? "✓ Installed"
-                  : "Install Firmware"}
+                  ? "✓ Updated"
+                  : "Update Now"}
             </Button>
           </div>
         </div>

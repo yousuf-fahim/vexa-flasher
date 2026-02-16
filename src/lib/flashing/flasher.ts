@@ -124,7 +124,7 @@ export async function flashBoard(
 
     // ── 2. Download firmware binaries ─────────────────────────
     onProgress(makeProgress("preparing", 10));
-    onLog(`Downloading ${board.parts.length} firmware file(s)...`);
+    onLog(`Downloading ${board.parts.length} update file(s)...`);
     onLog("⚠ If download fails, check that firmware files exist in public/firmware/");
 
     const fileArray: { data: string; address: number }[] = [];
@@ -145,7 +145,7 @@ export async function flashBoard(
       if (aborted) throw new Error("Aborted by user");
     }
     
-    onLog(`✓ All ${fileArray.length} firmware files downloaded successfully`);
+    onLog(`✓ All ${fileArray.length} update files downloaded successfully`);
     onLog(`Total size: ${fileArray.reduce((sum, f) => sum + f.data.length, 0)} bytes`);
 
     // ── 3. Flash ──────────────────────────────────────────────
@@ -154,7 +154,7 @@ export async function flashBoard(
         totalFiles: fileArray.length,
       }),
     );
-    onLog("Writing firmware to flash...");
+    onLog("Installing update to device...");
 
     const flashOptions: FlashOptions = {
       fileArray,
@@ -188,7 +188,7 @@ export async function flashBoard(
 
     // ── 4. Done ───────────────────────────────────────────────
     onProgress(makeProgress("done", 100));
-    onLog("Flash complete! Resetting device...");
+    onLog("Update complete! Resetting device...");
 
     try {
       await loader.after();
@@ -200,8 +200,8 @@ export async function flashBoard(
     onLog("✓ Firmware installed successfully!");
     onLog("");
     onLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
-    onLog("  NEXT STEP: Press the RESET button on your board");
-    onLog("  (or unplug and replug USB) to start the new firmware.");
+    onLog("  NEXT STEP: Press the RESET button on your device");
+    onLog("  (or unplug and replug USB) to start using the update.");
     onLog("━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━");
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);

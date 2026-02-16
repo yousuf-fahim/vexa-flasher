@@ -17,11 +17,11 @@ export default function ModernHero() {
       <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Flash Your Board
+            Update Your VexaMiner
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-300">
-            Install firmware on your VexaMiner boards directly from your browser.
-            No desktop tools required — flash in under 1 minute.
+            Keep your VexaMiner up to date with the latest firmware directly from your browser.
+            No downloads or technical knowledge required.
           </p>
 
           {/* Feature pills */}

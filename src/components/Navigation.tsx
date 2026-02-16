@@ -20,12 +20,6 @@ export default function Navigation() {
           {/* Desktop Navigation */}
           <div className="hidden items-center gap-8 md:flex">
             <a
-              href="#features"
-              className="text-sm font-medium text-gray-700 transition hover:text-orange-600"
-            >
-              Features
-            </a>
-            <a
               href="#faq"
               className="text-sm font-medium text-gray-700 transition hover:text-orange-600"
             >
@@ -58,13 +52,6 @@ export default function Navigation() {
         {mobileMenuOpen && (
           <div className="border-t border-gray-200 py-4 md:hidden">
             <div className="flex flex-col gap-4">
-              <a
-                href="#features"
-                onClick={() => setMobileMenuOpen(false)}
-                className="text-sm font-medium text-gray-700"
-              >
-                Features
-              </a>
               <a
                 href="#faq"
                 onClick={() => setMobileMenuOpen(false)}

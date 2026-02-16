@@ -24,9 +24,8 @@ export default function App() {
                   Unsupported Browser
                 </h3>
                 <p className="mt-2 text-sm text-amber-800">
-                  This flasher requires the <strong>Web Serial API</strong>, which is only
-                  available in <strong>Google Chrome 89+</strong> and{" "}
-                  <strong>Microsoft Edge 89+</strong> on desktop.
+                  This updater requires <strong>Google Chrome </strong> or{" "}
+                  <strong>Microsoft Edge </strong> on desktop.
                 </p>
                 <p className="mt-2 text-sm text-amber-700">
                   Safari, Firefox, and mobile browsers are not supported.
@@ -46,12 +45,12 @@ export default function App() {
       )}
 
       <ModernFlasher />
-      <Features />
+      {/* <Features /> */}
       <FAQ />
 
       <footer className="border-t border-gray-200 bg-gray-50 py-8 text-center text-sm text-gray-600">
         <div className="mx-auto max-w-7xl px-4">
-          VexaMiner Web Flasher · Powered by{" "}
+          VexaMiner Updater · Powered by{" "}
           {/* <a
             href="https://github.com/espressif/esptool-js"
             target="_blank"
