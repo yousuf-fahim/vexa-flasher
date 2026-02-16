@@ -1,7 +1,6 @@
 import Navigation from "./components/Navigation";
 import ModernHero from "./components/ModernHero";
 import ModernFlasher from "./components/ModernFlasher";
-import Features from "./components/Features";
 import FAQ from "./components/FAQ";
 import { isWebSerialSupported } from "./lib/flashing/webSerial";
 import { AlertCircle } from "lucide-react";
