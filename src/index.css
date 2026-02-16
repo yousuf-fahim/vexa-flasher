@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/*
+ * ── VexaMiner Brand Colors ────────────────────────────────
+ *
+ * Primary accent: orange-600 (#f97627) from the VexaMiner logo
+ * Theme: Light mode for all devices (better visibility)
+ */
+
+:root {
+  color-scheme: light;
+}
