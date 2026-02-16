@@ -41,10 +41,9 @@ export default function ModernHero() {
             </div>
           </div>
 
-          <div className="mt-6 flex items-center justify-center gap-2 text-sm text-amber-500">
-            <span>⚠</span>
-            <span>Chrome or Edge Browser required</span>
-          </div>
+          <p className="mt-6 text-sm text-amber-400">
+            ⚠ Chrome or Edge Browser required
+          </p>
         </div>
       </div>
     </div>
