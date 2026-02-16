@@ -26,13 +26,14 @@ export default function ModernHero() {
 
           {/* Feature pills */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <div className="flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-2 text-sm font-medium text-orange-400 backdrop-blur-sm">
-              <Zap className="h-4 w-4" />
-              WebSerial
-            </div>
+            
             <div className="flex items-center gap-2 rounded-full border border-gray-600 bg-gray-800/50 px-4 py-2 text-sm font-medium text-gray-300 backdrop-blur-sm">
               <Clock className="h-4 w-4" />
-              Under 1 minute
+              WebSerial
+            </div>
+            <div className="flex items-center gap-2 rounded-full border border-orange-500/30 bg-orange-500/10 px-4 py-2 text-sm font-medium text-orange-400 backdrop-blur-sm">
+              <Zap className="h-4 w-4" />
+              Under 1 Minute
             </div>
             <div className="flex items-center gap-2 rounded-full border border-gray-600 bg-gray-800/50 px-4 py-2 text-sm font-medium text-gray-300 backdrop-blur-sm">
               <Shield className="h-4 w-4" />
@@ -40,9 +41,10 @@ export default function ModernHero() {
             </div>
           </div>
 
-          <p className="mt-6 text-sm text-amber-400">
-            ⚠ Chrome or Edge Browser required
-          </p>
+          <div className="mt-6 flex items-center justify-center gap-2 text-sm text-amber-500">
+            <span>⚠</span>
+            <span>Chrome or Edge Browser required</span>
+          </div>
         </div>
       </div>
     </div>
