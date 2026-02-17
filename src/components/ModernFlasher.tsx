@@ -143,7 +143,7 @@ export default function ModernFlasher() {
   };
 
   return (
-    <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8" translate="no">
       <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
         {/* Board Selection */}
         <div className="mb-8">

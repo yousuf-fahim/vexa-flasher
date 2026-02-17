@@ -9,7 +9,7 @@ export default function App() {
   const supported = isWebSerialSupported();
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-white text-gray-900" translate="no">
       <Navigation />
       <ModernHero />
 
