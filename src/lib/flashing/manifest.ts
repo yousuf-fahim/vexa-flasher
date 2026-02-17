@@ -24,7 +24,7 @@ export const boards: BoardProfile[] = [
   {
     id: "vexaminer-v2",
     name: "VexaMiner v2",
-    description: "Latest VexaMiner with 2.8\" display",
+    description: "",
     chipFamily: "esp32",
     baudRate: 460800,
     flashMode: "dio",
